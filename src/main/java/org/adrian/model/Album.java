@@ -9,13 +9,13 @@ import java.time.LocalDate;
 public class Album {
 
     @Id
-    private String id;
+    private Long id;
     private String grupo_id;
     private String titulo;
     private LocalDate data_lanzamento;
     private float puntuacion;
 
-    public Album(String id, String grupo_id, String titulo, LocalDate data_lanzamento, float puntuacion) {
+    public Album(Long id, String grupo_id, String titulo, LocalDate data_lanzamento, float puntuacion) {
         this.id = id;
         this.grupo_id = grupo_id;
         this.titulo = titulo;
@@ -26,11 +26,11 @@ public class Album {
     public Album() {
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

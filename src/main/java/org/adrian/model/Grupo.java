@@ -10,13 +10,13 @@ import java.time.LocalDate;
 public class Grupo {
 
     @Id
-    private String id;
+    private Long id;
     private String nome;
     private String xenero;
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate dataFormacion;
 
-    public Grupo(String id, String nome, String xenero, LocalDate dataFormacion) {
+    public Grupo(Long id, String nome, String xenero, LocalDate dataFormacion) {
         this.id = id;
         this.nome = nome;
         this.xenero = xenero;
@@ -26,11 +26,11 @@ public class Grupo {
     public Grupo() {
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

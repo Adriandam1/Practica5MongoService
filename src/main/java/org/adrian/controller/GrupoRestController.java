@@ -13,7 +13,10 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping(RestExample.MAPPING)
 public class GrupoRestController {
+
+    public static final String MAPPING = "/base";
 
     @Autowired
     private GrupoRepository grupoRepository;

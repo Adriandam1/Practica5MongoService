@@ -12,19 +12,16 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping(RestExample.MAPPING)
 public class AlbumRestController {
+
+    public static final String MAPPING = "/base";
 
     @Autowired
     private AlbumRepository albumRepository;
 
     @Autowired
     private AlbumService albumService;
-
-    @Operation(summary = "Método que saúda")
-    @PostMapping("/saudo")
-    public String saudo() {
-        return "Boas! parece que isto, contra todo pronostico, funciona";
-    }
 
     @Operation(summary = "Crear un novo album")
     @PostMapping("/crearAlbum")
